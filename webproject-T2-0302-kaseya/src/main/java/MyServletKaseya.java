@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class MyServlet
  */
-@WebServlet("/MyServlet")
+@WebServlet("/MyServletKaseya")
 public class MyServletKaseya extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -48,9 +48,13 @@ public class MyServletKaseya extends HttpServlet {
 	         DBConnectionKaseya.getDBConnection(getServletContext());
 	         connection = DBConnectionKaseya.connection;
 	         String selectSQL = "SELECT * FROM USERS WHERE username LIKE ? AND password LIKE ?";
+	         String theUserName = username + "%";
+	         String thePassWord = password + "%";
 	         preparedStatement = connection.prepareStatement(selectSQL);
+	         preparedStatement.setString(1, theUserName);
+	         preparedStatement.setString(2, thePassWord);
 	         ResultSet rs = preparedStatement.executeQuery();
-	         while(rs.next()==false) {
+	         if(rs.next()==false) {
 	        	 out.println("<BR><BR><BR><BR><BR>");               
 	                out.println("<html><head><title>Login check</title></head><body>");
 	    out.println("<CENTER><B>Unknown User</B>");
@@ -59,6 +63,9 @@ public class MyServletKaseya extends HttpServlet {
 	    out.println("<BR><BR><BR>");
 	    out.println("<CENTER><Input Type=Button Value=Back></CENTER>");
 	    out.println("</body></html>");
+	         }
+	         else {
+	        	 response.sendRedirect("Welcome.html");
 	         }
 	         
 	         

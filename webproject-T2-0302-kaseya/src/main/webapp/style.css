@@ -66,7 +66,7 @@ h1{
 	border: none;
 	outline: none;
 	height: 40px;
-	background: #008000;
+	background: #3090C7;
 	color: #fff;
 	font-size: 18px;
 	border-radius: 20px;
@@ -75,7 +75,7 @@ h1{
 .loginbox input[type="submit"]:hover
 {
 	cursor: pointer;
-	background: #ffc107;
+	background: #6698FF;
 	color: #000;
 }
 
@@ -89,5 +89,5 @@ h1{
 
 .loginbox a:hover
 {
-	color: #ffc107;
+	color: #6698FF;
 }
