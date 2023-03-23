@@ -57,19 +57,19 @@ public class SearchKaseya extends HttpServlet {
 	            preparedStatement = connection.prepareStatement(selectSQL);
 	         } 
 	        else if(!keyword.isEmpty() && keyword1.isEmpty()) {
-	        	 String selectSQL = "SELECT * FROM EMPLOYEE WHERE LIKE ?";
+	        	 String selectSQL = "SELECT * FROM EMPLOYEE WHERE FIRST_NAME =?";
 	             String thefirstName = keyword + "%";
 	             preparedStatement = connection.prepareStatement(selectSQL);
 	             preparedStatement.setString(1, thefirstName);       
 	         }
 	        else if(keyword.isEmpty() && !keyword1.isEmpty()) {
-	        	 String selectSQL = "SELECT * FROM EMPLOYEE WHERE LAST_NAME LIKE ?";
+	        	 String selectSQL = "SELECT * FROM EMPLOYEE WHERE LAST_NAME =?";
 	             String thelastName = keyword1 + "%";
 	             preparedStatement = connection.prepareStatement(selectSQL);
 	             preparedStatement.setString(1, thelastName);
 	         }
 	        else {
-	            String selectSQL = "SELECT * FROM EMPLOYEE WHERE FIRST_NAME LIKE ? AND LAST_NAME LIKE ?";
+	            String selectSQL = "SELECT * FROM EMPLOYEE WHERE FIRST_NAME =? AND LAST_NAME =?";
 	            String thefirstName = keyword + "%";
 	            String thelastName = keyword1 + "%";
 	            preparedStatement = connection.prepareStatement(selectSQL);
