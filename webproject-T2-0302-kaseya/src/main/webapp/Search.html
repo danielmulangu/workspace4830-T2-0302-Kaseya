@@ -1,0 +1,107 @@
+<html>
+<head>
+<style>
+header {
+    background-color:#368BC1;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:600px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+footer {
+    background-color:#659EC7;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+.btn-group button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #357EC7;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group button:hover {background-color: #488AC7}
+
+.button:active {
+  background-color: #3090C7;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+input[type=submit] {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #357EC7;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+      }
+
+</style>
+</head>
+
+<body>
+<header>
+<h1> Search Employee Record in the database </h1>
+</header>
+
+<nav>
+<a href=/webproject-T2-0302-kaseya/Homepage.html>Logout</a>
+</nav>
+
+<section>
+
+	<h1>Please insert the information below:</h1>
+	
+	<form action="SearchKaseya" method="POST">
+	
+	 
+	 First Name: <input type="text" name="keyword1"> <br />  <br />
+	 
+	 Last Name: <input type="text" name="keyword2"> <br />   <br />
+	 
+     
+     <input type="submit" value="Search" />
+     
+     </form>
+     
+     
+</section>
+
+<footer>
+Copyright
+</footer>
+</body>
+</html>
