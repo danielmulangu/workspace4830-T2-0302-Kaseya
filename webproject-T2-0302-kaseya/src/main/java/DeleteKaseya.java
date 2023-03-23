@@ -51,6 +51,7 @@ public class DeleteKaseya extends HttpServlet {
 	    PreparedStatement preparedSMT = null;
 	    
 	    try {
+	    	
 	    	DBConnectionKaseya.getDBConnection(getServletContext());
 	        connection = DBConnectionKaseya.connection;
 	        String deleteSQL = "DELETE FROM EMPLOYEE WHERE FIRST_NAME =? AND LAST_NAME =? ";
