@@ -61,7 +61,7 @@ public class MyServletKaseya extends HttpServlet {
 	    out.println("<BR><BR>");
 	    out.println("<h3> Access Denied</h3></CENTER>");
 	    out.println("<BR><BR><BR>");
-	    out.println("<CENTER><Input Type=Button Value=Back></CENTER>");
+	    out.println("<a href=/webproject-T2-0302-kaseya/Homepage.html>Go Back</a> <br></CENTER>");
 	    out.println("</body></html>");
 	         }
 	         else {
